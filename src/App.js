@@ -3,7 +3,6 @@ import heroPic from "./Components/images/mexicanfood.png";
 import "./App.css";
 import EnhancedTable from "./Components/MaterialUI/tables";
 import Logo from "./Components/logo";
-import GitHubIcon from "@material-ui/icons/GitHub";
 
 function App() {
   return (
