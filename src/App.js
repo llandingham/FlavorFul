@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import heroPic from "./Components/images/mexicanfood.png";
+import "./App.css";
+import EnhancedTable from "./Components/MaterialUI/tables";
+import Logo from "./Components/logo";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={heroPic} className="heroPic" alt="logo" />
       </header>
+      <section className="tableSect">
+        <EnhancedTable />
+      </section>
+      <section className="Logo">
+        <Logo />
+      </section>
     </div>
   );
 }
