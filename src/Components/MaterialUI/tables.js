@@ -19,146 +19,6 @@ import Tooltip from "@material-ui/core/Tooltip";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
 
-function createData(name, type, rating, cal, cost) {
-  return { name, type, rating, cal, cost };
-}
-//The data in rows should be DishName / Type of Cuisine / Rating / Calories / Price Per Serving / Ingredence List / Actual Recipe
-const rows = [
-  createData(
-    "Chicken Korma",
-    "Indian",
-    8,
-    500,
-    4.0,
-    ["Chicken", "Cashews", "Rice", "Ghee", "Spices"],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-  createData(
-    "Chicken Biryani",
-    "Indian",
-    9.3,
-    280,
-    4.3,
-    ["Chicken", "Saffron", "Rice", "Ghee", "Spices"],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-  createData(
-    "Kung Pao Chicken",
-    "Chinese",
-    8.5,
-    220,
-    6.0,
-    [
-      "Chicken",
-      "Shecuan Peppers",
-      "Peanuts",
-      "Celery",
-      "Sesame Oil",
-      "Zuchinis",
-      "Rice",
-    ],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-  createData(
-    "Scallion Pancakes",
-    "Chinese",
-    7.5,
-    180,
-    4.3,
-    ["Scallions", "Flour", "Soy Sauce", "Seasame Oil", "Eggs"],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-  createData(
-    "Korean Fried Cauliflour",
-    "Korean",
-    9.5,
-    280,
-    3.9,
-    [
-      "Cauliflower",
-      "Tempora Batter",
-      "Korean Chili Paste",
-      "Lime",
-      "Green Onion",
-    ],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-  createData(
-    "Korean Chili Paste",
-    "Korean",
-    10,
-    15,
-    3.9,
-    [
-      "Gochujang",
-      "Kalbi",
-      "Korean Chili Paste",
-      "Kecap Manis",
-      "Honey",
-      "Garlic",
-      "Ginger",
-      "Sugar",
-      "Apple Cider Vinegar",
-      "Seasame Oil",
-      "Siracha",
-    ],
-    [
-      "Place all ingredients into a blender and process until incorporated and smooth, scraping the sides occasionally to ensure even blending.",
-    ]
-  ),
-  createData(
-    "Pork Carnitas",
-    "Mexican",
-    7.5,
-    180,
-    4.3,
-    [
-      "Pork Butt",
-      "Chipotle Peppers",
-      "Chicken Stock",
-      "Onion",
-      "Garlic",
-      "Spices",
-    ],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-  createData(
-    "Fajitas",
-    "Mexican-TexMex",
-    8,
-    180,
-    4.3,
-    ["Skirt Steak", "Yellow Onion", "Bell Pepper", "Salt and Pepper"],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-  createData(
-    "Curry Chicken Salad",
-    "American-Asian Fusion",
-    10,
-    150,
-    4.3,
-    [
-      "Chicken Breast",
-      "Mayo",
-      "Curry Powder",
-      "Salt and Pepper",
-      "Raisins",
-      "Celery",
-      "Cashews",
-      "Fuji Apples",
-    ],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-  createData(
-    "Chicken Fried Steak",
-    "American",
-    8.5,
-    400,
-    4.3,
-    ["Skirt Steak", "Flour", "Eggs", "Salt and Pepper"],
-    ["step1", "step2", "step3", "step 4"]
-  ),
-];
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -374,7 +234,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function EnhancedTable() {
+export default function EnhancedTable({ rows }) {
+  console.log(rows);
+
   const classes = useStyles();
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("type");
