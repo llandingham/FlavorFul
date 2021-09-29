@@ -5,7 +5,7 @@ import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import Checkbox from "@material-ui/core/Checkbox";
 import TableSortLabel from "@material-ui/core/TableSortLabel";
-import { HeadCells } from "./EnhancedTableHeader.const";
+import { HeadCells } from "./EnhancedTableHead.const";
 
 
 function EnhancedTableHead(props) {
