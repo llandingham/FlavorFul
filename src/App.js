@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import heroPic from "./Components/images/mexicanfood.png";
 import "./App.css";
-import EnhancedTable from "./Components/MaterialUI/tables";
+import EnhancedTable from "./Components/Table/EnhancedTable";
 import Logo from "./Components/logo";
 import Axios from "axios";
 
